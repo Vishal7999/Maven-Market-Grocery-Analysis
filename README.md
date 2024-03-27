@@ -49,11 +49,13 @@ Snap of tables in Model View:
 - Step 8 : In the DATA view, add the following **calculated columns**:
 
 - In the **Calendar** table,
+
 ```Weekend = IF('Calendar'[Day Name] in {"Saturday", "Sunday"}, "Y", "N")```
 
 ```End of Month = EOMONTH('Calendar'[date],0)```
 
 - In the **Customers** table,
+
 ```Current Age = DATEDIFF(Customers[birthdate], TODAY(),YEAR)```
 
 ``` Priority = IF(Customers[homeowner] = "Y" && Customers[member_card] = "Golden", "High", "Standard")```
